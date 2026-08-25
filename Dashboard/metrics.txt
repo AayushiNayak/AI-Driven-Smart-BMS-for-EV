@@ -1,0 +1,11 @@
+========== ANN MODEL PERFORMANCE ==========
+
+SOC Prediction
+MAE  : 1.2175
+RMSE : 1.4944
+R2   : 0.9346
+
+SOH Prediction
+MAE  : 0.9564
+RMSE : 1.3591
+R2   : 0.9832
