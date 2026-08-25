@@ -15,8 +15,6 @@ This project develops a data-driven BMS framework using an **Artificial Neural N
 
 The trained model is integrated into a **Streamlit-based dashboard** that allows users to enter battery parameters, generate predictions, visualize battery conditions, and analyze prediction history.
 
-> **Note:** IoT and physical hardware integration are considered **future work**. The current implementation focuses on software-based prediction, analysis, simulation, and dashboard visualization.
-
 ---
 
 ## 🎯 Objectives
@@ -28,7 +26,6 @@ The trained model is integrated into a **Streamlit-based dashboard** that allows
 * Evaluate model performance using regression metrics.
 * Develop an interactive Streamlit dashboard.
 * Provide battery status and prediction visualization.
-* Create a foundation for future IoT-enabled BMS implementation.
 
 ---
 
@@ -130,72 +127,6 @@ SOC + SOH
 | Maximum Epochs | 25                        |
 | Early Stopping | Yes                       |
 | Random State   | 42                        |
-
----
-
-## 📐 Feature Scaling
-
-The input features are standardized before being passed to the ANN.
-
-The StandardScaler transformation is:
-
-[
-x' = \frac{x-\mu}{\sigma}
-]
-
-where:
-
-* (x) = original feature value
-* (\mu) = feature mean
-* (\sigma) = feature standard deviation
-* (x') = scaled feature value
-
-The same trained scaler is used during dashboard inference to maintain consistency between training and prediction.
-
----
-
-## 📈 Model Evaluation
-
-The model is evaluated using standard regression metrics.
-
-### Mean Absolute Error
-
-[
-MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i-\hat{y}_i|
-]
-
-### Root Mean Square Error
-
-[
-RMSE =
-\sqrt{
-\frac{1}{n}
-\sum_{i=1}^{n}
-(y_i-\hat{y}_i)^2
-}
-]
-
-### Coefficient of Determination
-
-[
-R^2 =
-1-
-\frac{
-\sum(y_i-\hat{y}_i)^2
-}{
-\sum(y_i-\bar{y})^2
-}
-]
-
-The project also analyzes:
-
-* Training vs. validation loss
-* Training vs. validation MAE
-* Actual vs. predicted SOC
-* Actual vs. predicted SOH
-* Residual distributions
-* Residual plots
-* Prediction distributions
 
 ---
 
@@ -400,52 +331,13 @@ The system provides a software foundation that can later be extended toward real
 
 ---
 
-## 🚀 Future Scope
-
-Future development can include:
-
-* 🔌 IoT sensor integration
-* 📡 Real-time battery data acquisition
-* 🔋 Hardware-based BMS integration
-* 📱 Mobile monitoring
-* ☁️ Cloud-based battery monitoring
-* ⚡ Real-time EV battery diagnostics
-* 🌡️ Thermal monitoring and prediction
-* 🔄 Online model updating
-* 🧠 Comparison with advanced ML/DL models
-* 🛰️ Hardware-in-the-loop simulation
-
----
-
-## ⚠️ Current Limitations
-
-* The current system is primarily software and dataset based.
-* Real-time physical battery sensors are not integrated.
-* IoT communication is not implemented.
-* Hardware-based BMS validation is part of future work.
-* Model performance depends on the characteristics of the training dataset.
-
----
-
 ## 👩‍💻 Author
 
 **Aayushi Nayak**
 
 B.Tech — Computer Science & Engineering
 
-Interested in:
-
-* Artificial Intelligence
-* Machine Learning
-* Deep Learning
-* Intelligent Systems
-* Electric Vehicle Technologies
-
 ---
-
-## 📜 Disclaimer
-
-This project is developed for **research, educational, and simulation purposes**. The predictions should not be used as the sole basis for safety-critical battery or Electric Vehicle decisions without appropriate hardware validation and engineering verification.
 
 ---
 
